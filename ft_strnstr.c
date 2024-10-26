@@ -10,24 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	size_t	i;
+	size_t		little_len;
 
-	i = 0;
-	if (!(*little))
-		return ((char *) big);
-	while (i <= len && len >= 0 && big[i] != '\0')
+	little_len = ft_strlen(little);
+	if (!little_len)
+		return ((char *)big);
+	while (*big && little_len <= len--)
 	{
-		if (i + ft_strlen(little) > len)
-			return (NULL);
-		if (big[i] == little[0])
-			if (ft_strncmp(&big[i], &little[0], ft_strlen(little)) == 0
-				&& (ft_strlen(little) + i) <= len)
-				return ((char *)&big[i]);
-		i++;
+		if (!ft_memcmp(big, little, little_len))
+			return ((char *)big);
+		big++;
 	}
-	return (0);
+	return (NULL);
 }

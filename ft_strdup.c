@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
 	char		*new_arr;
-	int			i;
 	int			size;
 
-	i = 0;
 	size = ft_strlen(s);
 	new_arr = (char *) malloc((size + 1) * sizeof(char));
 	if (!new_arr)
