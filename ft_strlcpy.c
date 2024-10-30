@@ -6,11 +6,11 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:53:46 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 12:53:55 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 17:02:36 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

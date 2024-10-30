@@ -6,11 +6,11 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:22:54 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 14:22:56 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:29:53 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -22,7 +22,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	dst = (unsigned char *)dest;
 	str = (unsigned char *)src;
 	if (dst == str)
+	{
 		return (dest);
+	}
 	while (i < n)
 	{
 		dst[i] = str[i];

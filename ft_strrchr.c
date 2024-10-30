@@ -6,23 +6,27 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:02:33 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:02:39 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:12:23 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
-	i = ft_strlen(s);
+	i = ft_strlen(str);
 	if ((unsigned char) c == '\0')
-		return ((char *) &s[i]);
+	{
+		return ((char *) &str[i]);
+	}
 	while (i > 0)
 	{
-		if (s[i - 1] == (unsigned char) c)
-			return ((char *) &s[i - 1]);
+		if (str[i - 1] == (unsigned char) c)
+		{
+			return ((char *) &str[i - 1]);
+		}
 		i--;
 	}
 	return (NULL);

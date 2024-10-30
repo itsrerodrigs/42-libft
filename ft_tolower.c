@@ -6,11 +6,9 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:59:34 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 12:59:40 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:03:42 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_tolower(int c)
 {

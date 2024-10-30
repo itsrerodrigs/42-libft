@@ -6,18 +6,16 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:47:54 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 12:48:29 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 17:04:31 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-size_t	ft_strlen(const char *c)
+int	ft_strlen(const char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (c[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}

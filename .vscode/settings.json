@@ -1,0 +1,7 @@
+{
+	"makefile.configureOnOpen": true,
+	"files.associations": {
+		"libft.h": "c",
+		"unistd.h": "c"
+	}
+}

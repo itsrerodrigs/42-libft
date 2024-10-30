@@ -6,11 +6,11 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:15:21 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:22:02 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:53:24 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

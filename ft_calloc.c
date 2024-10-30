@@ -6,18 +6,18 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:50:10 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 14:55:27 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:52:01 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
 	size_t	total_size;
 	void	*ptr;
 
-	total_size = nmemb * size;
+	total_size = num * size;
 	ptr = (void *)malloc(total_size * sizeof(*ptr));
 	if (ptr == NULL)
 		return (NULL);

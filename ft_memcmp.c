@@ -6,11 +6,11 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:26:16 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 14:48:47 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:40:57 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -24,7 +24,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (ptr1[i] != ptr2[i])
+		{
 			return ((int)ptr1[i] - ptr2[i]);
+		}
 		i++;
 	}
 	return (0);

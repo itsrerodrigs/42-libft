@@ -6,11 +6,11 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 09:54:26 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/23 10:03:58 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:52:43 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

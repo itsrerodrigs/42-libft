@@ -6,11 +6,11 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:54:18 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/26 13:54:21 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:24:50 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
