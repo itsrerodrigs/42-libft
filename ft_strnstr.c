@@ -6,15 +6,16 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:22:37 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/30 16:53:30 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/30 17:17:28 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	size_t	i;
+	size_t		little_len;
 
 	i = 0;
 	if (!(*s2))
@@ -29,5 +30,5 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 				return ((char *)&s1[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
