@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rerodrigs <rerodrigs@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 13:22:37 by renrodri          #+#    #+#             */
-/*   Updated: 2024/11/02 16:52:31 by rerodrigs        ###   ########.fr       */
+/*   Created: 2024/10/30 13:42:32 by renrodri          #+#    #+#             */
+/*   Updated: 2024/11/02 16:39:47 by rerodrigs        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+void	ft_putchar(char c, int fd)
 {
-	size_t		i;
+	write(fd, &c, 1);
+}
 
-	i = 0;
-	if (!(*s2))
+void	ft_putnbr_fd(int n, int fd)
+{
+	if (n == -2147483648)
 	{
-		return ((char *) s1);
+		ft_putchar('-', fd);
+		ft_putchar('2', fd);
+		ft_putnbr_fd(147483648, fd);
 	}
-	while (i < len && s1[i] != '\0')
+	else if (n > 9)
 	{
-		if (i + ft_strlen(s2) > len)
-		{
-			return (NULL);
-		}
-		if (s1[i] == s2[0])
-		{
-			if (ft_strncmp(&s1[i], s2, ft_strlen(s2)) == 0)
-			{
-				return ((char *)&s1[i]);
-			}
-		}
-		i++;
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
-	return (NULL);
+	else if (n < 0)
+	{
+		ft_putchar('-', fd);
+		n = -n;
+		ft_putnbr_fd(n, fd);
+	}
+	else
+	{
+		ft_putchar(48 + n, fd);
+	}
 }

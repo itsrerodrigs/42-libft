@@ -1,12 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rerodrigs <rerodrigs@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 13:40:40 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/30 13:41:01 by renrodri         ###   ########.fr       */
+/*   Created: 2024/10/30 13:42:20 by renrodri          #+#    #+#             */
+/*   Updated: 2024/11/02 16:37:27 by rerodrigs        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	while (*s)
+	{
+		write(fd, &(*s), 1);
+		s++;
+	}
+	write(fd, "\n", 1);
+}

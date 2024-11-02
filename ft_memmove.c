@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rerodrigs <rerodrigs@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 14:22:00 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/30 16:35:05 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/11/02 16:58:22 by rerodrigs        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		return (NULL);
 	}
-	else if (dest < src)
+	if (dest < src)
 	{
 		return (ft_memcpy(dest, src, n));
 	}
-	else if (n > 0)
+	if (n > 0)
+	{
 		while (n--)
-		ptr_dest[n] = ptr_src[n];
+		{
+			ptr_dest[n] = ptr_src[n];
+		}
+	}
 	return (dest);
 }

@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rerodrigs <rerodrigs@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 13:22:37 by renrodri          #+#    #+#             */
-/*   Updated: 2024/11/02 16:52:31 by rerodrigs        ###   ########.fr       */
+/*   Created: 2024/10/30 13:40:29 by renrodri          #+#    #+#             */
+/*   Updated: 2024/11/02 16:36:24 by rerodrigs        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		i;
+	int		size_concat;
+	char	*concat;
+	char	*temp;
 
-	i = 0;
-	if (!(*s2))
+	size_concat = ft_strlen(s1) + ft_strlen(s2);
+	concat = (char *)malloc((size_concat + 1) * sizeof(char));
+	if (!concat)
+		return (NULL);
+	concat[size_concat] = 0;
+	temp = concat;
+	while (*s1)
 	{
-		return ((char *) s1);
+		*concat = *s1;
+		concat++;
+		s1++;
 	}
-	while (i < len && s1[i] != '\0')
+	while (*s2)
 	{
-		if (i + ft_strlen(s2) > len)
-		{
-			return (NULL);
-		}
-		if (s1[i] == s2[0])
-		{
-			if (ft_strncmp(&s1[i], s2, ft_strlen(s2)) == 0)
-			{
-				return ((char *)&s1[i]);
-			}
-		}
-		i++;
+		*concat = *s2;
+		concat++;
+		s2++;
 	}
-	return (NULL);
+	concat = temp;
+	return (concat);
 }
