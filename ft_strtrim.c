@@ -6,7 +6,7 @@
 /*   By: rerodrigs <rerodrigs@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 13:40:40 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/31 15:14:01 by rerodrigs        ###   ########.fr       */
+/*   Updated: 2024/11/03 13:43:19 by rerodrigs        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	ft_in_set(char c, char const *set)
 	return (0);
 }
 
-//Esta funcao recebe " duarte sa  " e retorna "duarte sa"
-//ou seja, elimina a str set no inicio e no final da str s1
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trim;
