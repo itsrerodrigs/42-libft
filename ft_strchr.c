@@ -6,7 +6,7 @@
 /*   By: renrodri <renrodri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:08:18 by renrodri          #+#    #+#             */
-/*   Updated: 2024/10/30 16:53:09 by renrodri         ###   ########.fr       */
+/*   Updated: 2024/10/31 12:01:34 by renrodri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 char	*ft_strchr(const char *str, int c)
 {
+	unsigned char	uns_c;
+
+	uns_c = (unsigned char)c;
 	while (*str)
 	{
-		if (*str == (char)c)
+		if (*str == uns_c)
 		{
 			return ((char *)str);
 		}
 		str++;
 	}
-	if (c == '\0')
+	if (uns_c == '\0')
 	{
 		return ((char *)str);
 	}
