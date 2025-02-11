@@ -78,7 +78,3 @@ You can use third-party testers to ensure that your **Libft** functions work cor
 
 These testers can help you verify that all functions conform to the requirements.
 
----
-
-🚀 **Libft** is an essential project for learning how to build a library from scratch, and mastering it will pave the way for more advanced projects at 42 School. Good luck and happy coding! 😄
-
