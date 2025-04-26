@@ -33,7 +33,9 @@ SRC = ft_atoi.c \
       ft_putnbr_fd.c \
       ft_striteri.c \
       ft_itoa.c \
-      ft_split.c 
+      ft_split.c \
+      get_next_line.c \
+      ft_printf.c
 
 OBJ = $(SRC:.c=.o)
 
